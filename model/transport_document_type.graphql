@@ -1,0 +1,5 @@
+
+# The Transport Document Type is used to identify which type of document, the value of \&quot;transportDocumentID\&quot; represents.
+type TransportDocumentType {
+
+}

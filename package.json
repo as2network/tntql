@@ -1,0 +1,38 @@
+{
+  "name": "@as2network/tntql",
+  "version": "0.1.0",
+  "description": "track and trace graphql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "graphql-codegen": "graphql-codegen --config introspection.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/as2network/tntql.git"
+  },
+  "keywords": [
+    "track",
+    "and",
+    "trace",
+    "graphql",
+    "shipping",
+    "logistics"
+  ],
+  "author": "sam",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/as2network/tntql/issues"
+  },
+  "homepage": "https://github.com/as2network/tntql#readme",
+  "devDependencies": {
+    "@graphql-codegen/cli": "1.21.3",
+    "@graphql-codegen/introspection": "1.18.1",
+    "@graphql-codegen/typescript": "1.21.1",
+    "@graphql-codegen/typescript-document-nodes": "1.17.10",
+    "@graphql-codegen/typescript-mongodb": "1.18.1"
+  },
+  "dependencies": {
+    "graphql": "^15.5.0"
+  }
+}

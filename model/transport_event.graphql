@@ -1,0 +1,37 @@
+
+# The transport event entity is a specialization of the event entity to support specification of data that only applies to a transport event.
+type TransportEvent {
+
+  # The unique identifier for the Equipment Event ID/Transport Event ID/Shipment Event ID.
+  eventID: String!
+
+  eventType: EventType
+
+  # The local date and time, where the event took place, in ISO 8601 format.
+  eventDateTime: String!
+
+  eventClassifierCode: EventClassifierCode
+
+  # Unique identifier for Event Type Code, for transport events this is either ARRI (Arrival) or DEPA (Departure).
+  eventTypeCode: EventTypeCode
+
+  # The unique identifier for a transport call
+  transportCallID: Float!
+
+  # Reason code for the delay. The SMDG reference codes are used for this attribute.
+  delayReasonCode: String!
+
+  # Free text information provided by the vessel operator regarding the reasons for the change in schedule and/or plans to mitigate schedule slippage.
+  vesselScheduleChangeRemark: String!
+
+}
+
+enum EventType {
+  TRANSPORT
+}
+
+# Unique identifier for Event Type Code, for transport events this is either ARRI (Arrival) or DEPA (Departure).
+enum EventTypeCode {
+  ARRI
+  DEPA
+}

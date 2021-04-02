@@ -1,0 +1,8 @@
+schema: api/subscriptions_api.graphql
+documents: 'src/**/*.graphql'
+generates:
+  components.tsx:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo

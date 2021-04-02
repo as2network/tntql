@@ -1,0 +1,36 @@
+
+# package openapi2graphql
+
+# subscriptions_api
+
+type mutation {
+  # Create an event subscription
+  # @param EventSubscriptionBody eventSubscriptionBody Parameters used to configure the subscription
+  # @return [EventSubscription]
+  EventSubscriptionsPost(eventSubscriptionBody: EventSubscriptionBody): EventSubscription
+
+  # Stop an event subscription, using the subscription ID
+  # @param SubscriptionIdPathParam subscriptionID 
+  # @return [null]
+  EventSubscriptionsSubscriptionIDDelete(subscriptionID: SubscriptionIdPathParam): null
+
+  # Alter an event subscription
+  # @param SubscriptionIdPathParam subscriptionID 
+  # @param EventSubscription eventSubscription Parameters used to configure the subscription
+  # @return [EventSubscription]
+  EventSubscriptionsSubscriptionIDPut(subscriptionID: SubscriptionIdPathParam, eventSubscription: EventSubscription): EventSubscription
+
+}
+
+type query {
+  # Receive a list of your active event subscriptions
+  # @return [[EventSubscription]]
+  EventSubscriptionsGet(): [EventSubscription]
+
+  # Find event subscription by subscription ID
+  # @param SubscriptionIdPathParam subscriptionID The universal unique ID of the subscription to receive.
+  # @return [EventSubscription]
+  EventSubscriptionsSubscriptionIDGet(subscriptionID: SubscriptionIdPathParam): EventSubscription
+
+}
+

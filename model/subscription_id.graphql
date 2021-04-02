@@ -1,0 +1,7 @@
+
+# The carrier issues a unique ID to the shipper or consignee for that subscription
+type SubscriptionId {
+
+  subscriptionID: ID!
+
+}

@@ -1,0 +1,25 @@
+
+type TransportEventAllOf {
+
+  eventType: EventType
+
+  # Unique identifier for Event Type Code, for transport events this is either ARRI (Arrival) or DEPA (Departure).
+  eventTypeCode: EventTypeCode
+
+  # Reason code for the delay. The SMDG reference codes are used for this attribute.
+  delayReasonCode: String!
+
+  # Free text information provided by the vessel operator regarding the reasons for the change in schedule and/or plans to mitigate schedule slippage.
+  vesselScheduleChangeRemark: String!
+
+}
+
+enum EventType {
+  TRANSPORT
+}
+
+# Unique identifier for Event Type Code, for transport events this is either ARRI (Arrival) or DEPA (Departure).
+enum EventTypeCode {
+  ARRI
+  DEPA
+}

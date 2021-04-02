@@ -1,0 +1,21 @@
+
+type Error {
+
+  # The HTTP request method type
+  httpMethod: String!
+
+  # The request URI.
+  requestUri: String!
+
+  errors: [TodoObjectMapping]
+
+  # The HTTP status code
+  statusCode: Int!
+
+  # The textual representation of the response status.
+  statusCodeText: String!
+
+  # The date and time (in ISO 8601 format) the error occured.
+  errorDateTime: String!
+
+}

@@ -1,0 +1,40 @@
+
+# The equipment event entity is a specialization of the event entity to support specification of data that only applies to an equipment event.
+type EquipmentEvent {
+
+  # The unique identifier for the Equipment Event ID/Transport Event ID/Shipment Event ID.
+  eventID: String!
+
+  eventType: EventType
+
+  # The local date and time, where the event took place, in ISO 8601 format.
+  eventDateTime: String!
+
+  eventClassifierCode: EventClassifierCode
+
+  # Unique identifier for Event Type Code. For equipment events this can be: - LOAD (Load) - DISC (Discharge) - GTIN (Gate in) - GTOT (Gate out) - STUF (Stuffing) - STRP (Stripping) 
+  eventTypeCode: EventTypeCode
+
+  # The unique identifier for a transport call
+  transportCallID: Float!
+
+  # The unique identifier for the equipment, which should follow the BIC ISO Container Identification Number where possible. If a container is not yet assigned to a shipment, the interface cannot return any information when an equipment reference is given as input. If a container is assigned to an (active) shipment, the interface returns information on the active shipment.
+  equipmentReference: String!
+
+  emptyIndicatorCode: EmptyIndicatorCode
+
+}
+
+enum EventType {
+  EQUIPMENT
+}
+
+# Unique identifier for Event Type Code. For equipment events this can be: - LOAD (Load) - DISC (Discharge) - GTIN (Gate in) - GTOT (Gate out) - STUF (Stuffing) - STRP (Stripping) 
+enum EventTypeCode {
+  LOAD
+  DISC
+  GTIN
+  GTOT
+  STUF
+  STRP
+}

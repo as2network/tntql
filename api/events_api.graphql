@@ -1,0 +1,30 @@
+
+# package openapi2graphql
+
+# events_api
+
+type mutation {
+}
+
+type query {
+  # Find events by eventID.
+  # Returns event with the specified eventID.
+  # @param String! eventID The ID of the event to receive
+  # @return [OneOftransportEventshipmentEventequipmentEvent]
+  EventsEventIDGet(eventID: String!): OneOftransportEventshipmentEventequipmentEvent
+
+  # Find events.
+  # Returns all events filtered by the parameters.
+  # @param [EventType] eventType The type of event(s) to filter by.
+  # @param String! bookingReference The identifier for a shipment, which is issued by and unique within each of the carriers.
+  # @param String! transportDocumentID The Transport Document ID number is an identifier that links to a shipment, i.e. a Bill of Lading or a Sea Waybill. A bill of lading is the document of title to the goods issued to the customer which confirms the carrier&#39;s receipt of the cargo from the customer, acknowledging goods being shipped and specifying the terms of delivery. The Sea Waybill is a simpler document, the main difference being that it is non-negotiable.
+  # @param String! equipmentReference The unique identifier for the equipment, which should follow the BIC ISO Container Identification Number where possible.
+  # @param Float! scheduleID ID uniquely identifying a schedule, to filter events by.
+  # @param Float! transportCallID ID uniquely identifying a transport call, to filter events by.
+  # @param LimitParam limit Maximum number of items to return.
+  # @param CursorParam cursor A server generated value to specify a specific point in a collection result, used for pagination.
+  # @return [[AnyOftransportEventshipmentEventequipmentEvent]]
+  EventsGet(eventType: [EventType], bookingReference: String!, transportDocumentID: String!, equipmentReference: String!, scheduleID: Float!, transportCallID: Float!, limit: LimitParam, cursor: CursorParam): [AnyOftransportEventshipmentEventequipmentEvent]
+
+}
+

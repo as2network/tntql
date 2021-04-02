@@ -1,0 +1,21 @@
+
+# The event entity is described as a generalization of all the specific event categories. An event always takes place in relation to a shipment and can additionally be linked to a transport or an equipment
+type Event {
+
+  # The unique identifier for the Equipment Event ID/Transport Event ID/Shipment Event ID.
+  eventID: String!
+
+  eventType: EventType
+
+  # The local date and time, where the event took place, in ISO 8601 format.
+  eventDateTime: String!
+
+  eventClassifierCode: EventClassifierCode
+
+  # Unique identifier for Event Type Code. This code has different ENUM values depending on the type of event
+  eventTypeCode: String!
+
+  # The unique identifier for a transport call
+  transportCallID: Float!
+
+}

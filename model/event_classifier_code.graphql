@@ -1,0 +1,5 @@
+
+# Code for the event classifier, either PLN (Planned), ACT (Actual) or EST (Estimated).
+type EventClassifierCode {
+
+}

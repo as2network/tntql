@@ -1,0 +1,5 @@
+generates:
+  sdk.ts:
+    plugins:
+      - typescript
+      - typescript-generic-sdk

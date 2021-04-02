@@ -1,7 +1,5 @@
-
 # The equipment event entity is a specialization of the event entity to support specification of data that only applies to an equipment event.
 type EquipmentEvent {
-
   # The unique identifier for the Equipment Event ID/Transport Event ID/Shipment Event ID.
   eventID: String!
 
@@ -12,7 +10,7 @@ type EquipmentEvent {
 
   eventClassifierCode: EventClassifierCode
 
-  # Unique identifier for Event Type Code. For equipment events this can be: - LOAD (Load) - DISC (Discharge) - GTIN (Gate in) - GTOT (Gate out) - STUF (Stuffing) - STRP (Stripping) 
+  # Unique identifier for Event Type Code. For equipment events this can be: - LOAD (Load) - DISC (Discharge) - GTIN (Gate in) - GTOT (Gate out) - STUF (Stuffing) - STRP (Stripping)
   eventTypeCode: EventTypeCode
 
   # The unique identifier for a transport call
@@ -22,14 +20,13 @@ type EquipmentEvent {
   equipmentReference: String!
 
   emptyIndicatorCode: EmptyIndicatorCode
-
 }
 
 enum EventType {
   EQUIPMENT
 }
 
-# Unique identifier for Event Type Code. For equipment events this can be: - LOAD (Load) - DISC (Discharge) - GTIN (Gate in) - GTOT (Gate out) - STUF (Stuffing) - STRP (Stripping) 
+# Unique identifier for Event Type Code. For equipment events this can be: - LOAD (Load) - DISC (Discharge) - GTIN (Gate in) - GTOT (Gate out) - STUF (Stuffing) - STRP (Stripping)
 enum EventTypeCode {
   LOAD
   DISC

@@ -1,6 +1,4 @@
-
 type Error {
-
   # The HTTP request method type
   httpMethod: String!
 
@@ -17,5 +15,4 @@ type Error {
 
   # The date and time (in ISO 8601 format) the error occured.
   errorDateTime: String!
-
 }

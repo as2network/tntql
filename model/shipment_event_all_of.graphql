@@ -1,20 +1,17 @@
-
 type ShipmentEventAllOf {
-
   eventType: EventType
 
-  # Unique identifier for Event Type Code. For shipment events this can be: - RECE (Received) - CONF (Confirmed) - ISSU (Issued) - APPR (Approved) - SUBM (Submitted) - SURR (Surrendered) - REJE (Rejected) - PENA (Pending approval) 
+  # Unique identifier for Event Type Code. For shipment events this can be: - RECE (Received) - CONF (Confirmed) - ISSU (Issued) - APPR (Approved) - SUBM (Submitted) - SURR (Surrendered) - REJE (Rejected) - PENA (Pending approval)
   eventTypeCode: EventTypeCode
 
   shipmentInformationTypeCode: ShipmentInformationTypeCode
-
 }
 
 enum EventType {
   SHIPMENT
 }
 
-# Unique identifier for Event Type Code. For shipment events this can be: - RECE (Received) - CONF (Confirmed) - ISSU (Issued) - APPR (Approved) - SUBM (Submitted) - SURR (Surrendered) - REJE (Rejected) - PENA (Pending approval) 
+# Unique identifier for Event Type Code. For shipment events this can be: - RECE (Received) - CONF (Confirmed) - ISSU (Issued) - APPR (Approved) - SUBM (Submitted) - SURR (Surrendered) - REJE (Rejected) - PENA (Pending approval)
 enum EventTypeCode {
   RECE
   CONF

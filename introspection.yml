@@ -1,12 +1,12 @@
 overwrite: true
-schema: "api/subscriptions_api.graphql"
+schema: 'api/subscriptions_api.graphql'
 documents: null
 generates:
   src/generated/graphql.ts:
     plugins:
-      - "typescript"
-      - "typescript-mongodb"
-      - "typescript-document-nodes"
+      - 'typescript'
+      - 'typescript-mongodb'
+      - 'typescript-document-nodes'
   ./graphql.schema.json:
     plugins:
-      - "introspection"
+      - 'introspection'

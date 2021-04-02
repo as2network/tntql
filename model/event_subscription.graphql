@@ -1,6 +1,4 @@
-
 type EventSubscription {
-
   subscriptionID: ID!
 
   # Your server, where the API server should send the event data
@@ -25,5 +23,4 @@ type EventSubscription {
 
   # The unique identifier for a transport call
   transportCallID: Float!
-
 }

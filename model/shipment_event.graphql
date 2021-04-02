@@ -1,7 +1,5 @@
-
 # The shipment event entity is a specialization of the event entity to support specification of data that only applies to a shipment event.
 type ShipmentEvent {
-
   # The unique identifier for the Equipment Event ID/Transport Event ID/Shipment Event ID.
   eventID: String!
 
@@ -12,21 +10,20 @@ type ShipmentEvent {
 
   eventClassifierCode: EventClassifierCode
 
-  # Unique identifier for Event Type Code. For shipment events this can be: - RECE (Received) - CONF (Confirmed) - ISSU (Issued) - APPR (Approved) - SUBM (Submitted) - SURR (Surrendered) - REJE (Rejected) - PENA (Pending approval) 
+  # Unique identifier for Event Type Code. For shipment events this can be: - RECE (Received) - CONF (Confirmed) - ISSU (Issued) - APPR (Approved) - SUBM (Submitted) - SURR (Surrendered) - REJE (Rejected) - PENA (Pending approval)
   eventTypeCode: EventTypeCode
 
   # The unique identifier for a transport call
   transportCallID: Float!
 
   shipmentInformationTypeCode: ShipmentInformationTypeCode
-
 }
 
 enum EventType {
   SHIPMENT
 }
 
-# Unique identifier for Event Type Code. For shipment events this can be: - RECE (Received) - CONF (Confirmed) - ISSU (Issued) - APPR (Approved) - SUBM (Submitted) - SURR (Surrendered) - REJE (Rejected) - PENA (Pending approval) 
+# Unique identifier for Event Type Code. For shipment events this can be: - RECE (Received) - CONF (Confirmed) - ISSU (Issued) - APPR (Approved) - SUBM (Submitted) - SURR (Surrendered) - REJE (Rejected) - PENA (Pending approval)
 enum EventTypeCode {
   RECE
   CONF

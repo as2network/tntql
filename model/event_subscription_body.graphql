@@ -1,7 +1,5 @@
-
 # The object used by the POST event-subscriptions endpoint
 type EventSubscriptionBody {
-
   # Your server, where the API server should send the event data
   callbackUrl: String!
 
@@ -24,5 +22,4 @@ type EventSubscriptionBody {
 
   # The unique identifier for a transport call
   transportCallID: Float!
-
 }

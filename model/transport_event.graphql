@@ -1,7 +1,5 @@
-
 # The transport event entity is a specialization of the event entity to support specification of data that only applies to a transport event.
 type TransportEvent {
-
   # The unique identifier for the Equipment Event ID/Transport Event ID/Shipment Event ID.
   eventID: String!
 
@@ -23,7 +21,6 @@ type TransportEvent {
 
   # Free text information provided by the vessel operator regarding the reasons for the change in schedule and/or plans to mitigate schedule slippage.
   vesselScheduleChangeRemark: String!
-
 }
 
 enum EventType {
